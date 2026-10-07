@@ -1,0 +1,173 @@
+{
+  "circles": {
+    "weekend-trip": {
+      "id": "weekend-trip",
+      "name": "Weekend Trip",
+      "description": "A shared plan across three independent homes.",
+      "mode": "active",
+      "createdAt": "2026-10-07T18:29:27.756Z",
+      "members": [
+        {
+          "id": "member-a",
+          "name": "Alex",
+          "home": "Home A",
+          "accent": "lime",
+          "status": "online"
+        },
+        {
+          "id": "member-b",
+          "name": "Jordan",
+          "home": "Home B",
+          "accent": "cyan",
+          "status": "online"
+        },
+        {
+          "id": "member-c",
+          "name": "Taylor",
+          "home": "Home C",
+          "accent": "violet",
+          "status": "online"
+        }
+      ],
+      "shared": {
+        "destination": "Lake District",
+        "event": "Weekend Trip",
+        "date": "Saturday",
+        "status": "active"
+      },
+      "facts": [
+        {
+          "id": "fact-hotel",
+          "label": "Hotel",
+          "value": "Lakeview Resort",
+          "status": "confirmed",
+          "owner": "Alex",
+          "updatedBy": "Alex",
+          "updatedAt": "2026-10-07T18:29:27.756Z"
+        },
+        {
+          "id": "fact-cab",
+          "label": "Station pickup",
+          "value": "7:30 PM",
+          "status": "confirmed",
+          "owner": "Jordan",
+          "updatedBy": "Circle",
+          "updatedAt": "2026-10-07T18:31:56.456Z"
+        },
+        {
+          "id": "fact-arrival",
+          "label": "Taylor arrival",
+          "value": "7:20 PM",
+          "status": "confirmed",
+          "owner": "Taylor",
+          "updatedBy": "Taylor",
+          "updatedAt": "2026-10-07T18:29:27.756Z"
+        }
+      ],
+      "conflicts": [],
+      "actions": [
+        {
+          "id": "c6403f12-6cd8-4bf3-bb30-1ca7f493f8ee",
+          "kind": "transport",
+          "summary": "Move station pickup to 7:30 PM to match Taylor’s 7:20 PM arrival.",
+          "status": "executed",
+          "proposedAt": "2026-10-07T18:31:44.307Z",
+          "approvedAt": "2026-10-07T18:31:56.456Z"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-hotel",
+          "title": "Confirm hotel check-in",
+          "owner": "Alex",
+          "home": "Home A",
+          "status": "open",
+          "due": "Today",
+          "createdBy": "Alex",
+          "createdAt": "2026-10-07T18:29:27.756Z",
+          "completedAt": null
+        },
+        {
+          "id": "task-snacks",
+          "title": "Pick up snacks",
+          "owner": "Jordan",
+          "home": "Home B",
+          "status": "open",
+          "due": "Saturday",
+          "createdBy": "Jordan",
+          "createdAt": "2026-10-07T18:29:27.756Z",
+          "completedAt": null
+        }
+      ],
+      "activity": [
+        {
+          "id": "1972eee6-2146-4163-9079-db10b5c0dda3",
+          "actor": "Circle",
+          "home": "Shared",
+          "message": "Executed: Move station pickup to 7:30 PM to match Taylor’s 7:20 PM arrival.",
+          "type": "action",
+          "at": "2026-10-07T18:31:56.456Z"
+        },
+        {
+          "id": "5a6c2761-d1cb-4dfb-a6d7-c8fa5e1082da",
+          "actor": "Circle",
+          "home": "Shared",
+          "message": "Proposed: Move station pickup to 7:30 PM to match Taylor’s 7:20 PM arrival.",
+          "type": "proposal",
+          "at": "2026-10-07T18:31:44.307Z"
+        }
+      ],
+      "chat": [
+        {
+          "id": "2a289216-2177-4f0b-9d6b-be30f2c0542f",
+          "actor": "Circle",
+          "home": "Shared",
+          "message": "I found a problem and proposed: Move station pickup to 7:30 PM to match Taylor’s 7:20 PM arrival.",
+          "role": "assistant",
+          "at": "2026-10-07T18:31:44.307Z"
+        },
+        {
+          "id": "b97ddb6b-8de4-4305-a30f-a1523718a2e1",
+          "actor": "Circle",
+          "home": "Shared",
+          "message": "Approved and applied: Move station pickup to 7:30 PM to match Taylor’s 7:20 PM arrival.",
+          "role": "assistant",
+          "at": "2026-10-07T18:31:56.456Z"
+        },
+        {
+          "id": "1a85a288-15e4-4f07-bca4-ea8ced103119",
+          "actor": "Alex",
+          "home": "Home A",
+          "message": "What's missing?",
+          "role": "user",
+          "at": "2026-10-07T18:32:37.804Z"
+        },
+        {
+          "id": "2ed4eb68-2783-415d-8323-66cc406fa651",
+          "actor": "Circle",
+          "home": "Shared",
+          "message": "Nothing important is currently blocked. The Circle is in sync.",
+          "role": "assistant",
+          "at": "2026-10-07T18:32:37.804Z"
+        },
+        {
+          "id": "6e1087aa-132a-4a09-8e80-3ba5fd726673",
+          "actor": "Jordan",
+          "home": "Home B",
+          "message": "What's the plan?",
+          "role": "user",
+          "at": "2026-10-07T18:32:48.271Z"
+        },
+        {
+          "id": "1f634dec-c969-4cee-94dd-afcb5277e8c0",
+          "actor": "Circle",
+          "home": "Shared",
+          "message": "3 shared items are confirmed. There are no active conflicts.",
+          "role": "assistant",
+          "at": "2026-10-07T18:32:48.271Z"
+        }
+      ],
+      "lastUpdated": "2026-10-07T18:37:33.332Z"
+    }
+  }
+}

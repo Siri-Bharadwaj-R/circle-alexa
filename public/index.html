@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#090b10" />
+  <meta name="description" content="Circle — one shared AI space across independent homes." />
+  <title>Circle — Different homes. One AI.</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Circle home">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span class="brand-copy"><strong>Circle</strong><small>shared AI space</small></span>
+      </a>
+      <div class="top-actions">
+        <span class="live-status"><span class="live-dot"></span>SIMULATED ALEXA+ EXPERIENCE</span>
+        <button id="resetBtn" class="ghost">Reset demo</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">ONE CIRCLE · THREE HOMES · ONE LIVE STATE</p>
+          <h1>Different homes.<br><em>One AI.</em></h1>
+          <p class="lede">Circle gives people in separate homes one shared conversational AI space. Each home talks independently; Circle keeps the plan, state, conflicts and approved actions synchronized for everyone.</p>
+          <div class="hero-actions">
+            <button id="demoBtn" class="primary">Run the 60-second demo</button>
+            <div class="hero-note"><strong>Self-hosted MCP</strong><span>·</span><span>No Alexa hardware required</span></div>
+          </div>
+          <div class="hero-proof">
+            <span>VOICE</span><span>SHARED STATE</span><span>AGENT REASONING</span><span>APPROVAL</span>
+          </div>
+        </div>
+
+        <div class="orb-card">
+          <div class="orb-glow"></div>
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="orb-core">C</div>
+          <div class="orb-label"><span>ACTIVE CIRCLE</span><strong id="circleName">Weekend Trip</strong><small id="circleDesc">Shared across three homes</small></div>
+          <div class="orb-node node-a">A</div>
+          <div class="orb-node node-b">J</div>
+          <div class="orb-node node-c">T</div>
+        </div>
+      </section>
+
+      <section class="circle-bar panel">
+        <div class="circle-overview">
+          <div><p class="eyebrow">LIVE CIRCLE</p><h2>Weekend Trip</h2></div>
+          <span class="live-pill"><span class="live-dot"></span><span id="memberCount">3</span> homes connected</span>
+        </div>
+        <div class="circle-purpose">
+          <span class="purpose-kicker">SHARED PURPOSE</span>
+          <strong id="circlePurpose">Coordinate one plan across independent homes.</strong>
+        </div>
+        <div class="circle-stats">
+          <div><strong id="confirmedCount">0</strong><span>confirmed</span></div>
+          <div><strong id="issueCountTop">0</strong><span>needs attention</span></div>
+          <div><strong id="activityCount">0</strong><span>live updates</span></div>
+        </div>
+      </section>
+
+      <section class="homes-section">
+        <div class="section-head">
+          <div><p class="eyebrow">HOME NODES</p><h2>Each home speaks. Circle remembers.</h2></div>
+          <span id="syncBadge" class="sync-badge"><span class="sync-dot"></span>SYNCED</span>
+        </div>
+        <div id="homesGrid" class="homes-grid"></div>
+        <div class="shared-strip">
+          <div><span class="shared-strip-kicker">WHAT EVERY HOME SEES</span><strong>Same Circle. Same state. Different conversations.</strong></div>
+          <div id="sharedChips" class="shared-chips"></div>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <div class="panel state-panel">
+          <div class="panel-head"><div><p class="eyebrow">SHARED STATE</p><h2>What Circle knows now</h2></div><span id="lastUpdated" class="muted">syncing…</span></div>
+          <div id="facts" class="facts"></div>
+        </div>
+
+        <div class="panel reasoning-panel">
+          <div class="panel-head"><div><p class="eyebrow">AGENT REASONING</p><h2>What needs attention</h2></div><span id="issueCount" class="pill">0</span></div>
+          <div id="conflicts" class="conflicts"></div>
+          <div id="proposal" class="proposal hidden"></div>
+        </div>
+      </section>
+
+      <section class="tasks-panel panel">
+        <div class="panel-head">
+          <div><p class="eyebrow">SHARED TASKS</p><h2>Give the Circle something to do</h2></div>
+          <span class="muted">Changes propagate to every home</span>
+        </div>
+        <div class="task-composer">
+          <input id="taskTitle" type="text" placeholder="e.g. Book dinner for Saturday" autocomplete="off" />
+          <select id="taskOwner" aria-label="Assign task to"></select>
+          <input id="taskDue" type="text" placeholder="Due: Saturday" autocomplete="off" />
+          <button id="createTaskBtn" class="primary">Create task</button>
+        </div>
+        <div id="tasks" class="tasks"></div>
+      </section>
+
+      <section class="timeline panel">
+        <div class="panel-head"><div><p class="eyebrow">CROSS-HOME ACTIVITY</p><h2>One timeline, every home</h2></div><span class="muted">Live shared state</span></div>
+        <div id="activity" class="activity"></div>
+      </section>
+
+      <section class="circle-chat panel">
+        <div class="panel-head">
+          <div><p class="eyebrow">SHARED CONVERSATION</p><h2>Ask from any home</h2></div>
+          <span class="muted">Try “what's missing?”</span>
+        </div>
+        <div id="chat" class="chat"></div>
+      </section>
+
+      <section class="demo-strip">
+        <div>
+          <p class="eyebrow">THE JUDGE MOMENT</p>
+          <strong id="demoStageTitle">Trigger the timing conflict → Circle proposes a repair → one approval updates every home.</strong>
+          <span id="demoStageText" class="demo-stage-text">Start the demo to reset the three homes, surface the conflict, and show the shared repair flow.</span>
+        </div>
+        <div class="demo-actions"><button id="proposalBtn" class="secondary">Create repair proposal</button><button id="approveBtn" class="primary">Approve for everyone</button></div>
+      </section>
+    </main>
+
+    <footer><span>Circle</span> · shared multi-home AI space · self-hosted MCP · simulated Alexa+ experience</footer>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
